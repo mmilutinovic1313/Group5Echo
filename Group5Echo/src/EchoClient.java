@@ -9,7 +9,7 @@ import java.util.Scanner;
 
 /**
  *
- * @author gluck
+ * @author mmilutinovic1313
  */
 public class EchoClient {
 
@@ -36,8 +36,11 @@ public class EchoClient {
                     }
                     out.println(inputLine);
                     String response = br.readLine();
-                    System.out.println("Server response: " + response);
+                    // toUpperCase function changes string message to requested format. 
+                    System.out.println("Server response: " + response.toUpperCase());
                 }
+                out.close();
+                br.close();
                 clientSocket.close();
                 }
         }
@@ -45,5 +48,4 @@ public class EchoClient {
             ex.printStackTrace();
         }
     }
-    
 }
